@@ -12,8 +12,8 @@ export default function Home() {
         <div className='logo'>< Image 
         src="/logo.png" 
         layout="fixed" 
-        width={300} 
-        height={300}
+        width={100} 
+        height={100}
         alt="logo"/>
         </div>
         <h1>Next News App</h1>

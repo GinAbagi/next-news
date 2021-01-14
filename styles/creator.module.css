@@ -1,5 +1,6 @@
+/*ccs for creator tab */
 .main {
-    felx: 1;
+    flex: 1;
     display:flex;
     align-items: center;
     flex-direction: column;
