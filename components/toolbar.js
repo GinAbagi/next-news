@@ -9,7 +9,7 @@ export const Toolbar = () => {
             <div onClick={() => router.push('/')}>Home</div>
             <div onClick={() => router.push('/feed/1')}>Feed</div>
             <div onClick={() => router.push('/EOM')}>Creator</div>
-            <div onClick={() => window.location.href = 'http://twitter.com'}>Twitter</div>
+            <div onClick={() => window.location.href = 'https://twitter.com/NextNews17'}>Twitter</div>
         </div>
     )
 };
