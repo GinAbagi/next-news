@@ -1,7 +1,7 @@
 import { Toolbar } from '../components/toolbar';
-import styles from '../styles/creator.module.css';
+import styles from '../styles/EOM.module.css';
 
-export const creator = ({ employee }) => {
+export const EOM = ({ employee }) => {
     console.log(employee);
     return(
         <div className= 'page-container'>
@@ -33,4 +33,4 @@ export const getServerSideProps = async pageContext => {
     }
 };
 
-export default creator;
+export default EOM;
