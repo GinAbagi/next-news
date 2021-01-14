@@ -7,7 +7,7 @@ export default function Home() {
     <div className='page-container'>
       <Toolbar />
       <div className={styles.main}>
-        <h1>Next.js News App</h1>
+        <h1>Next News App</h1>
 
         <h3>You are at the right places for the latest news articles
         </h3>
