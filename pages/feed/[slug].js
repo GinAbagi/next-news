@@ -1,7 +1,35 @@
+import styles from '../../styles/Feed.module.css';
+import { useRouter } from 'next/router';
+
 export const Feed = ({ pageNumber, articles}) => {
-    console.log(articles, pageNumber);
-    return (<>Hello world </>);
+    const router = useRouter();
+
+    return (
+        <div className='page-container'>   
+            <div className={styles.main}>
+                {articles.map((article, index) => (
+                    <div key={index} className={styles.post}>
+                    <h1 onClick={() => (window.location.href = article.url)}>{article.title}</h1>
+                    <p>{article.description}</p>
+                {!!article.urlToImage && <img src={article.urlToImage} />}
+            </div>
+            ))}
+        </div>
+        <div className={styles.paginator}>
+            <div 
+            onClick={() =>{
+                if (pageNumber > 1){
+                    router.push(`/feed/${pageNumber - 1}`)
+                }
+            }}
+            
+            className={pageNumber === 1 ? styles.disabled : styles.active}>Previous Page</div>
+            
+        </div>
+        </div>
+    );
 };
+        
 
 export const getServerSideProps = async pageContext => {
     const pageNumber = pageContext.query.slug;
