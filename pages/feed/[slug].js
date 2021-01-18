@@ -2,6 +2,11 @@ import styles from '../../styles/Feed.module.css';
 import { Toolbar } from '../../components/toolbar';
 import { useRouter } from 'next/router';
 
+//feed navigation and API info fetch 
+//page-container fetches article url on title and pic of article
+//if clicked on page selector, scroll back up and skip to next page
+//when page is above 5 or less than 1 disable the click
+
 export const Feed = ({ pageNumber, articles}) => {
     const router = useRouter();
 
@@ -44,7 +49,7 @@ export const Feed = ({ pageNumber, articles}) => {
     );
 };
         
-
+//if page is less than 1 or more than 5 disable the click
 export const getServerSideProps = async pageContext => {
     const pageNumber = pageContext.query.slug;
 
@@ -56,6 +61,7 @@ export const getServerSideProps = async pageContext => {
             }
         }
     }
+    //API fetch
     const apiResponse = await fetch(
         `https://newsapi.org/v2/top-headlines?country=nl&pageSize=5&page=${pageNumber}`,
         {

@@ -1,6 +1,7 @@
 import { Toolbar } from '../components/toolbar';
 import styles from '../styles/EOM.module.css';
 
+//Creator tab fetch and toolbar import
 export const EOM = ({ employee }) => {
     console.log(employee);
     return(
@@ -18,6 +19,8 @@ export const EOM = ({ employee }) => {
         </div>
     );
 };
+
+//fetch and show creator info from my.json server
 
 export const getServerSideProps = async pageContext => {
     const apiResponse = await fetch(

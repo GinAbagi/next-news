@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import styles from '../styles/Toolbar.module.css';
 
+// Toolbar navigation
 export const Toolbar = () => {
     const router = useRouter();
 

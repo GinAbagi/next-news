@@ -1,5 +1,5 @@
 .main {
-  flex:1;
+  flex: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -9,4 +9,3 @@
 .main h1 {
   margin-top: 50px;
 }
-
