@@ -27,7 +27,7 @@ Om het makkelijk te maken en het resultaat alvast te zien heb ik een [Link](http
 
 Om het project zelf te hosten kan je de volgende stappen uitvoeren:
 
-1. Clone mijn [GIT] repository.
+1. Clone mijn [GIT](https://github.com/GinAbagi/next-news) repository.
 2. De volgende code starten in de terminal van je code editor
 
 ```bash
